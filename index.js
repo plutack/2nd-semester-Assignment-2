@@ -1,6 +1,6 @@
 const http = require("http");
 const server = http.createServer();
-const hostnamae = "talut-pc";
+const hostname = "127.0.0.1";
 const port = 3000;
 server.on("request", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
@@ -40,6 +40,6 @@ server.on("request", (req, res) => {
     );
   }
 });
-server.listen(port, hostnamae, () =>
+server.listen(port, hostname, () =>
   console.log(`Server started on port: ${port}`),
 );
